@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perhitungan Biaya Kirim Paket</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef4f7;
+        margin: 40px;
+      }
+      .container {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        width: 450px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        color: #1d5b8f;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+      }
+      button {
+        background-color: #1d5b8f;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        margin-top: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #16496f;
+      }
+      .result {
+        margin-top: 20px;
+        font-weight: bold;
+        color: green;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>PERHITUNGAN BIAYA KIRIM PAKET</h2>
+      <label>Nomor Resi:</label>
+      <input type="text" id="resi" />
+
+      <label>Berat Barang (Kg):</label>
+      <input type="number" id="berat" step="0.1" min="0" />
+
+      <label>Kota Asal:</label>
+      <select id="asal">
+        <option value="">-- Pilih Kota --</option>
+        <option>Banyuwangi</option>
+        <option>Jember</option>
+        <option>Probolinggo</option>
+        <option>Surabaya</option>
+      </select>
+
+      <label>Kota Tujuan:</label>
+      <select id="tujuan">
+        <option value="">-- Pilih Kota --</option>
+        <option>Banyuwangi</option>
+        <option>Jember</option>
+        <option>Probolinggo</option>
+        <option>Surabaya</option>
+      </select>
+
+      <button onclick="hitungBiaya()">Hitung Biaya</button>
+
+      <div class="result" id="hasil"></div>
+    </div>
+
+    <!-- Panggil file JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
