@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Penjualan Computer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>APLIKASI PENJUALAN COMPUTER</h2>
+
+      <div class="form-section">
+        <label>Kategori :</label>
+        <select id="kategori">
+          <option value="">-- Pilih Kategori --</option>
+          <option value="pc">PC/Laptop</option>
+          <option value="aksesori">Aksesoris</option>
+        </select>
+
+        <label>Nama Barang :</label>
+        <input type="text" id="namaBarang" readonly placeholder="Klik untuk pilih barang" onclick="tampilkanPopup()" />
+
+        <label>Harga Satuan (Rp) :</label>
+        <input type="number" id="harga" readonly />
+
+        <label>Jumlah :</label>
+        <input type="number" id="jumlah" />
+
+        <label>Jenis Penjualan :</label>
+        <select id="jenisPenjualan">
+          <option value="tunai">Tunai</option>
+          <option value="kredit">Kredit</option>
+        </select>
+
+        <button onclick="hitungTotal()">Hitung</button>
+      </div>
+
+      <div class="hasil">
+        <label>Total Penjualan :</label>
+        <input type="text" id="totalPenjualan" readonly />
+
+        <label>Diskon :</label>
+        <input type="text" id="diskon" readonly />
+
+        <label>Pajak :</label>
+        <input type="text" id="pajak" readonly />
+
+        <label>Harga Total :</label>
+        <input type="text" id="hargaTotal" readonly />
+      </div>
+
+      <div class="ketentuan">
+        <p><strong>Ketentuan:</strong></p>
+        <ul>
+          <li>Diskon 10% jika penjualan dilakukan secara tunai.</li>
+          <li>
+            Pajak:
+            <ul>
+              <li>15% dari harga satuan untuk barang utama (PC/Laptop)</li>
+              <li>10% dari harga satuan untuk aksesoris</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <h3>Pilih Barang</h3>
+        <div id="daftarBarang"></div>
+        <button onclick="tutupPopup()">Tutup</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
