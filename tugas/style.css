@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(120deg, #0fa, #0af);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-section label,
+.hasil label {
+  display: block;
+  margin-top: 10px;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background: white;
+  width: 300px;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.barang {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.barang button {
+  background-color: #28a745;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.barang button:hover {
+  background-color: #1e7e34;
+}
