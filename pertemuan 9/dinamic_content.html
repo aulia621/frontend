@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Search JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="cari" placeholder="Cari nama...">
+    <br><br>
+
+    <ul id="daftar">
+        <li>Dendi</li>
+        <li>Budi</li>
+        <li>Citra</li>
+        <li>Dewi</li>
+        <li>Eko</li>
+    </ul>
+
+    <script>
+        $("#cari").on("keyup", function() {
+            const keyword = $(this).val().toLowerCase();
+
+            $("#daftar li").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(keyword) > -1);
+            });
+        });
+    </script>
+
+</body>
+</html>
